@@ -1,0 +1,74 @@
+---
+title: "R Notebook"
+---
+
+```{r}
+# install require packages
+# BiocManager::install("YuLab-SMU/treedataverse")
+# to install (tidytree, treeio, ggtree, ggtreeExtra)
+# load required libraries
+library(treedataverse)
+```
+
+
+# Introduction
+
+The project aims to simulate and rank the most common issues that faces phylogenomic multiloci analyses. The main effects that this project investigates are:
+
+-   Horizontal gene transfer (HGT)
+-   Paralogy
+-   Long branch attraction (LBA)
+
+Each of these factors is incorporated in each of the simulated alignments using a reference base tree. The reference clean ture tree has four groups of taxa:
+
+-   Group A: sister to B
+-   Group B: sister to A
+-   Group C: First split of the ingroup, sister to (A,B)
+-   Group Z: Outgroup to define the root of the ingroup
+
+## Simulation for the errors
+### HGT
+For HGT simulations, Branches at different hisotry levels from group B is simulated as HGT events targetting group C. All alignment will have these copies to be tested incrementally and in different combinations. The expected breaking point is when group C become aretifically closer to group B leaving out group A the first split.
+
+### Paralogy
+Paralogy problem occurs in genes in which part of the ingroup taxa are related through a duplication event that preceded their speciation.
+Two levels of paralogy are simulated by branches that emrge before the speciation node of the main ingroups A, B, and C. These two paralog pranches are after the B group to simulate the process of mixing paralogs with orthologs.
+
+
+### Long Branch Attraction
+Long branch attraction is when two taxa with long branches are aretifcially inferred as closer to each other than their true relation. This phenomena is more problematic if the outgroup and one of the ingroup taxa has long branches that make them aretificially drown toward eachother.
+
+Another scnario would be to measure how long branch groups are affected by the other two problems, namely HGT and paralogy. To simulate this, a another branch of Groups C is simulated to have evolved with long branches and tested if their taxa are contaminated with HGT. As for testing how paralogy contamination affects taxa with long pranches the simulation is done by simulated Group B as a long branch, and simulated gradual contamination from the same two branches that split before the LCA of A B and C.
+
+
+```{r}
+# Figure for the reference tree to simulated the alingments
+simTree <- read.tree('simTree.tre')
+groupInfo <- split(simTree$tip.label, gsub("_[^_]+_", "_", simTree$tip.label))
+simTree <- groupOTU(simTree, groupInfo)
+ggtree(simTree, aes(color = group)) + geom_tiplab() + xlim(NA, 3)
+```
+
+
+# Read the alignments
+
+```{r}
+simAlignments <- dir(path = 'alignments/', pattern = '\\.fa$', full.names = TRUE)
+simAlignments <- setNames(lapply(simAlignments, function(z){
+  as.matrix(read.FASTA(file = z, type = 'AA'))
+}), nm = gsub('(^alignments/+)|(\\.fa$)', '', simAlignments))
+```
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
