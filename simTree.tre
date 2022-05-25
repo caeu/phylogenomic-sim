@@ -42,7 +42,7 @@
 									genusB_sp05_ortholog:0.2,
 									genusB_sp06_ortholog:0.2
 								):0.2
-							):0.12,
+							):0.04,
 							(	(	(
 										genusC_sp01_hg1:0.2,
 										genusC_sp02_hg1:0.2
@@ -56,8 +56,8 @@
 									genusC_sp05_hg1:0.2,
 									genusC_sp06_hg1:0.2
 								):0.2
-							):0.12
-						):0.04,
+							):0.04
+						):0.12,
 						(	(	(
 									genusB_sp01_longbranch:0.32,
 									genusB_sp02_longbranch:0.32
@@ -74,20 +74,35 @@
 						):0.32
 					):0.04
 				):0.04,
-					(	(	(
-								genusC_sp01_ortholog:0.2,
-								genusC_sp02_ortholog:0.2
+					(	(	(	(
+									genusC_sp01_ortholog:0.2,
+									genusC_sp02_ortholog:0.2
+								):0.2,
+								(
+									genusC_sp03_ortholog:0.2,
+									genusC_sp04_ortholog:0.2
+								):0.2
 							):0.2,
 							(
-								genusC_sp03_ortholog:0.2,
-								genusC_sp04_ortholog:0.2
+								genusC_sp05_ortholog:0.2,
+								genusC_sp06_ortholog:0.2
 							):0.2
-						):0.2,
-						(
-							genusC_sp05_ortholog:0.2,
-							genusC_sp06_ortholog:0.2
-						):0.2
-					):0.2
+						):0.12,
+						(	(	(
+									genusC_sp01_longbranch:0.32,
+									genusC_sp02_longbranch:0.32
+								):0.32,
+								(
+									genusC_sp03_longbranch:0.32,
+									genusC_sp04_longbranch:0.32
+								):0.32
+							):0.32,
+							(
+								genusC_sp05_longbranch:0.32,
+								genusC_sp06_longbranch:0.32
+							):0.32
+						):0.32
+					):0.08
 			):0.08,
 			(	(	(
 						genusB_sp01_paralog1:0.2,
