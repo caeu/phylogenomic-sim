@@ -58,20 +58,35 @@
 								):0.2
 							):0.04
 						):0.12,
-						(	(	(
-									genusB_sp01_longbranch:0.32,
-									genusB_sp02_longbranch:0.32
-								):0.32,
+					(	(	(	(
+										genusB_sp01_longbranch:0.30,
+										genusB_sp02_longbranch:0.30
+									):0.30,
+									(
+										genusB_sp03_longbranch:0.30,
+										genusB_sp04_longbranch:0.30
+									):0.30
+								):0.30,
 								(
-									genusB_sp03_longbranch:0.32,
-									genusB_sp04_longbranch:0.32
-								):0.32
-							):0.32,
-							(
-								genusB_sp05_longbranch:0.32,
-								genusB_sp06_longbranch:0.32
-							):0.32
-						):0.32
+									genusB_sp05_longbranch:0.30,
+									genusB_sp06_longbranch:0.30
+								):0.30
+							):0.30,
+							(	(	(
+										genusB_sp01_longerbranch:0.40,
+										genusB_sp02_longerbranch:0.40
+									):0.40,
+									(
+										genusB_sp03_longerbranch:0.40,
+										genusB_sp04_longerbranch:0.40
+									):0.40
+								):0.40,
+								(
+									genusB_sp05_longerbranch:0.40,
+									genusB_sp06_longerbranch:0.40
+								):0.40
+							):0.40
+						):0.04
 					):0.04
 				):0.04,
 					(	(	(	(
@@ -88,20 +103,35 @@
 								genusC_sp06_ortholog:0.2
 							):0.2
 						):0.12,
-						(	(	(
-									genusC_sp01_longbranch:0.32,
-									genusC_sp02_longbranch:0.32
-								):0.32,
+						(	(	(	(
+										genusC_sp01_longbranch:0.30,
+										genusC_sp02_longbranch:0.30
+									):0.30,
+									(
+										genusC_sp03_longbranch:0.30,
+										genusC_sp04_longbranch:0.30
+									):0.30
+								):0.30,
 								(
-									genusC_sp03_longbranch:0.32,
-									genusC_sp04_longbranch:0.32
-								):0.32
-							):0.32,
-							(
-								genusC_sp05_longbranch:0.32,
-								genusC_sp06_longbranch:0.32
-							):0.32
-						):0.32
+									genusC_sp05_longbranch:0.30,
+									genusC_sp06_longbranch:0.30
+								):0.30
+							):0.30,
+							(	(	(
+										genusC_sp01_longerbranch:0.40,
+										genusC_sp02_longerbranch:0.40
+									):0.40,
+									(
+										genusC_sp03_longerbranch:0.40,
+										genusC_sp04_longerbranch:0.40
+									):0.40
+								):0.40,
+								(
+									genusC_sp05_longerbranch:0.40,
+									genusC_sp06_longerbranch:0.40
+								):0.40
+							):0.40
+						):0.04
 					):0.08
 			):0.08,
 			(	(	(
@@ -134,19 +164,34 @@
 			):0.2
 		):0.24
 	):0.2,
-	(	(	(
-				genusZ_sp01_outgroup:0.32,
-				genusZ_sp02_outgroup:0.32
-			):0.32,
+	(	(	(	(
+					genusZ_sp01_ortholog:0.30,
+					genusZ_sp02_ortholog:0.30
+				):0.30,
+				(
+					genusZ_sp03_ortholog:0.30,
+					genusZ_sp04_ortholog:0.30
+				):0.30
+			):0.30,
 			(
-				genusZ_sp03_outgroup:0.32,
-				genusZ_sp04_outgroup:0.32
-			):0.32
-		):0.32,
-		(
-			genusZ_sp05_outgroup:0.32,
-			genusZ_sp06_outgroup:0.32
-		):0.32
+				genusZ_sp05_ortholog:0.30,
+				genusZ_sp06_ortholog:0.30
+			):0.30
+		):0.04,
+		(	(	(
+					genusZ_sp01_longerbranch:0.40,
+					genusZ_sp02_longerbranch:0.40
+				):0.40,
+				(
+					genusZ_sp03_longerbranch:0.40,
+					genusZ_sp04_longerbranch:0.40
+				):0.40
+			):0.40,
+			(
+				genusZ_sp05_longerbranch:0.40,
+				genusZ_sp06_longerbranch:0.40
+			):0.40
+		):0.04
 	):0.36
 );
 
