@@ -26,7 +26,7 @@ Each of these factors is incorporated in each of the simulated alignments using 
 -   Group C: First split of the ingroup, sister to (A,B)
 -   Group Z: Outgroup to define the root of the ingroup
 
-## Simulation for the errors
+## Creating the tree for simulating the errors
 ### HGT
 For HGT simulations, Branches at different hisotry levels from group B is simulated as HGT events targetting group C. All alignment will have these copies to be tested incrementally and in different combinations. The expected breaking point is when group C become aretifically closer to group B leaving out group A the first split.
 
@@ -38,19 +38,64 @@ Two levels of paralogy are simulated by branches that emrge before the speciatio
 ### Long Branch Attraction
 Long branch attraction is when two taxa with long branches are aretifcially inferred as closer to each other than their true relation. This phenomena is more problematic if the outgroup and one of the ingroup taxa has long branches that make them aretificially drown toward eachother.
 
-Another scnario would be to measure how long branch groups are affected by the other two problems, namely HGT and paralogy. To simulate this, a another branch of Groups C is simulated to have evolved with long branches and tested if their taxa are contaminated with HGT. As for testing how paralogy contamination affects taxa with long pranches the simulation is done by simulated Group B as a long branch, and simulated gradual contamination from the same two branches that split before the LCA of A B and C.
+Another scnario would be to measure how long branch groups are affected by the other two problems, namely HGT and paralogy. To simulate this, a another branch of Groups C is simulated to have evolved with long branches and tested if their taxa are contaminated with HGT. As for testing how paralogy contamination affects taxa with long pranches the simulation is done by simulated Group B as a long branch, and simulated with gradually replacing true sequences with paralog ones from the same two branches that split before the LCA of ortholog group of A, B and C.
 
 
 ```{r}
 # Figure for the reference tree to simulated the alingments
 simTree <- read.tree('simTree.tre')
+simTree[["edge.length"]] <- simTree[["edge.length"]] * 2
+write.tree(simTree, file = 'alignments/simTree1.tre')
 groupInfo <- split(simTree$tip.label, gsub("_[^_]+_", "_", simTree$tip.label))
 simTree <- groupOTU(simTree, groupInfo)
-ggtree(simTree, aes(color = group)) + geom_tiplab() + xlim(NA, 3)
+ggtree(simTree, aes(color = group), branch.length = 'rate') + 
+  geom_tiplab() + 
+  xlim(NA, 5)
 ```
 
+## Simulating the alignments
+AliSim is a functionality implemented in IQTree version 2.2.00 that can simulate the evolution of sequences given a tree and an evolution model.
 
-# Read the alignments
+```{bash, eval=FALSE}
+# ./alignments/generate_alignments_iqtree.sh
+iqtree2 --alisim alnmnt -m LG+G4 -t simTree1.tre --num-alignments 50 --length 100 -af fasta -seed 888 
+```
+
+## Testing the evolution state of the simulated alignments
+Inferring a single tree from each alignment, using FastTree to check that the alignment has evolved enough that each alignment individually does not sufficient phylogenetic information to produce the true tree. We are using seqkit to keep on the orthologs and the ougroup
+
+```{bash, eval=FALSE}
+# ./alignments/
+mkdir testtrees
+ls *.fa | parallel 'seqkit fx2tab {} | egrep "(ortholog|outgroup)" | seqkit tab2fx | FastTree -lg > testtrees/{/.}.tre'
+```
+
+### Testing the proportion of trees that have the true root split
+```{r}
+treeset <- lapply(dir(path = 'alignments/testtrees/', pattern = '\\.tre$', full.names = TRUE), \(z) {read.tree(z)})
+treeset <- .compressTipLabel(treeset)
+insistax <- grep(pattern = '^genus(A|B)',treeset[[1]][["tip.label"]])
+sum(sapply(treeset, \(z) {is.monophyletic(z, tips = insistax)})) / length(treeset)
+```
+Only 24 trees (48%) recovered the correct root split, other nodes are ignored.
+
+
+### Analysis
+
+First the orthologus alignment are tested to provide a benchmark for the ideal performance for this data.
+Creating supermatrices starting with 6 alignments and increments of 2 till 40 ()
+Each set will be concatented and a RAxML tree with bootstraps is inferred
+
+Also for each issue, a set of supermatrices is created with similar sizes the first set:
+
+#### Long branch effect
+- Replacing genusB_spxx_ortholog with genusB_spxx_longbranch
+
+
+
+
+
+# Read the genrated alignments into R
 
 ```{r}
 simAlignments <- dir(path = 'alignments/', pattern = '\\.fa$', full.names = TRUE)
