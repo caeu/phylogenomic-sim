@@ -1,0 +1,917 @@
+IQ-TREE multicore version 2.2.0 COVID-edition for Mac OS X 64-bit built Mar 25 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    Caesar16 (AVX2, FMA3, 64 GB RAM)
+Command: iqtree2 --alisim alnmnt -m LG+G4 -t simTree.tre --num-alignments 50 --length 100 -af fasta -seed 888
+Seed:    888 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon May 23 07:05:17 2022
+Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
+
+[Alignment Simulator] Executing
+ - Tree filepath: simTree.tre
+ - Length of output sequences: 100
+ - Model: LG+G4
+ - Number of output datasets: 50
+An alignment has just been exported to alnmnt_1.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_2.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_3.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_4.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_5.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_6.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_7.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_8.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_9.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_10.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_11.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_12.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_13.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_14.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_15.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_16.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_17.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_18.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_19.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_20.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_21.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_22.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_23.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_24.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_25.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_26.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_27.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_28.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_29.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_30.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_31.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_32.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_33.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_34.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_35.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_36.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_37.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_38.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_39.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_40.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_41.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_42.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_43.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_44.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_45.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_46.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_47.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_48.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_49.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+An alignment has just been exported to alnmnt_50.fa
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 1.000
+
+ Category  Relative_rate  Proportion
+  1         0.137          0.250
+  2         0.477          0.250
+  3         1.000          0.250
+  4         2.386          0.250
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+[Alignment Simulator] Done
+Date and Time: Mon May 23 07:05:17 2022

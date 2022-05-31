@@ -15,4 +15,4 @@
 #-af fasta\                 `# as fasta` 
 #-nt4 \                 `# use 4 cpus`
 
-iqtree2 --alisim alnmnt -m LG+G4 -t simTree1.tre --num-alignments 10 --length 200 -af fasta -seed 888            
+iqtree2 --alisim alnmnt -m LG+G4 -t simTree1.tre --num-alignments 20 --length 200 -af fasta -seed 111 
