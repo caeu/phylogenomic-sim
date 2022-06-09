@@ -8,8 +8,8 @@ title: "R Notebook"
 # to install (tidytree, treeio, ggtree, ggtreeExtra)
 # load required libraries
 library(treedataverse)
+library(readr)
 ```
-
 
 # Introduction
 
@@ -27,21 +27,32 @@ Each of these factors is incorporated in each of the simulated alignments using 
 -   Group Z: Outgroup to define the root of the ingroup
 
 ## Creating the tree for simulating the errors
+
 ### HGT
+
 For HGT simulations, Branches at different hisotry levels from group B is simulated as HGT events targetting group C. All alignment will have these copies to be tested incrementally and in different combinations. The expected breaking point is when group C become aretifically closer to group B leaving out group A the first split.
 
 ### Paralogy
-Paralogy problem occurs in genes in which part of the ingroup taxa are related through a duplication event that preceded their speciation.
-Two levels of paralogy are simulated by branches that emrge before the speciation node of the main ingroups A, B, and C. These two paralog pranches are after the B group to simulate the process of mixing paralogs with orthologs.
 
+Paralogy problem occurs in genes in which part of the ingroup taxa are related through a duplication event that preceded their speciation. Two levels of paralogy are simulated by branches that emrge before the speciation node of the main ingroups A, B, and C. These two paralog pranches are after the B group to simulate the process of mixing paralogs with orthologs.
 
 ### Long Branch Attraction
+
 Long branch attraction is when two taxa with long branches are aretifcially inferred as closer to each other than their true relation. This phenomena is more problematic if the outgroup and one of the ingroup taxa has long branches that make them aretificially drown toward eachother.
 
 Another scnario would be to measure how long branch groups are affected by the other two problems, namely HGT and paralogy. To simulate this, a another branch of Groups C is simulated to have evolved with long branches and tested if their taxa are contaminated with HGT. As for testing how paralogy contamination affects taxa with long pranches the simulation is done by simulated Group B as a long branch, and simulated with gradually replacing true sequences with paralog ones from the same two branches that split before the LCA of ortholog group of A, B and C.
 
-
 ```{r}
+# function to scale branch lengths of a raw newick tree
+# read from a tree file and write to a new tree file
+newick_file_scale <- function(infile = '', outfile = '', scl = 1) {
+  require(readr)
+  tretxt <- unlist(read_file('simTree_fix.tre') |> strsplit(":"))
+  nvalues <- as.numeric(sub("^(\\d\\.\\d+).*", "\\1", tretxt[-1])) * scl
+  nvalues <- c("", as.character(nvalues))
+  nvalues <- paste0(sapply(seq_along(tretxt), \(z) sub("^\\d\\.\\d+", nvalues[z], tretxt[z])), collapse = ":")
+  write_file(nvalues, outfile)
+
 # Figure for the reference tree to simulated the alingments
 simTree <- read.tree('simTree.tre')
 simTree[["edge.length"]] <- simTree[["edge.length"]] * 2
@@ -54,46 +65,45 @@ ggtree(simTree, aes(color = group), branch.length = 'rate') +
 ```
 
 ## Simulating the alignments
+
 AliSim is a functionality implemented in IQTree version 2.2.00 that can simulate the evolution of sequences given a tree and an evolution model.
 
-```{bash, eval=FALSE}
-# ./alignments/generate_alignments_iqtree.sh
-iqtree2 --alisim alnmnt -m LG+G4 -t simTree1.tre --num-alignments 50 --length 100 -af fasta -seed 888 
+```{r}
+iqtree_sh <- 'alignments/generate_alignments_iqtree.sh'
+grep('^iqtree2', readLines(iqtree_sh), value = TRUE) |> cat()
 ```
 
 ## Testing the evolution state of the simulated alignments
-Inferring a single tree from each alignment, using FastTree to check that the alignment has evolved enough that each alignment individually does not sufficient phylogenetic information to produce the true tree. We are using seqkit to keep on the orthologs and the ougroup
 
-```{bash, eval=FALSE}
-# ./alignments/
-mkdir testtrees
-ls *.fa | parallel 'seqkit fx2tab {} | egrep "(ortholog|outgroup)" | seqkit tab2fx | FastTree -lg > testtrees/{/.}.tre'
+Inferring a single tree from each alignment, using FastTree to check that the alignment has evolved enough that each alignment individually does not sufficient phylogenetic information to produce the true tree. We are using seqkit to keep on the orthologs and the ougroup.
+
+```{r}
+path_testtrees <- 'alignments/testtrees/'
+dir.create(path = path_testtrees, showWarnings = FALSE)
+grep("FastTree", readLines(iqtree_sh), value = TRUE) |> cat()
 ```
 
 ### Testing the proportion of trees that have the true root split
+
 ```{r}
 treeset <- lapply(dir(path = 'alignments/testtrees/', pattern = '\\.tre$', full.names = TRUE), \(z) {read.tree(z)})
 treeset <- .compressTipLabel(treeset)
 insistax <- grep(pattern = '^genus(A|B)',treeset[[1]][["tip.label"]])
 sum(sapply(treeset, \(z) {is.monophyletic(z, tips = insistax)})) / length(treeset)
 ```
-Only 24 trees (48%) recovered the correct root split, other nodes are ignored.
 
+Only 11 trees (55%) recovered the correct root split, other nodes are ignored.
 
 ### Analysis
 
-First the orthologus alignment are tested to provide a benchmark for the ideal performance for this data.
-Creating supermatrices starting with 6 alignments and increments of 2 till 40 ()
-Each set will be concatented and a RAxML tree with bootstraps is inferred
+First, n sets of pure orthologus alignment are tested to provide a benchmark for an estimated cutoff point for the size at which a reliable phylogenetic signal is achieved. Creating 5 supermatrices with randomly selected partitions starting with 2 partitions and increments of 1 till 20. Each set will be concatented and a RAxML tree with bootstraps is inferred.
 
-Also for each issue, a set of supermatrices is created with similar sizes the first set:
+The test case supermatrices will be of full size (20). For each test case, one orthologous alignment is replaced with a non-orthologous till reaching 50% (10).
+
 
 #### Long branch effect
-- Replacing genusB_spxx_ortholog with genusB_spxx_longbranch
 
-
-
-
+-   Replacing genusB_spxx_ortholog with genusB_spxx_longbranch
 
 # Read the genrated alignments into R
 
@@ -108,12 +118,9 @@ This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*.
 
+
 ```{r}
-plot(cars)
+
+}
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
